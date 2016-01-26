@@ -7,11 +7,16 @@ class Teacher {
     String  firstName
     String  lastName
     Date    dateCreated
-    Date    lastUpdate
+    Date    lastUpdated
     Timestamp version
 
     static constraints = {
         firstName   blank: false, nullable: false, unique: ['firstName','lastName']
         lastName    blank: false, nullable: false
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName
     }
 }

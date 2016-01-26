@@ -8,10 +8,10 @@ class Lesson {
     Date    day
     Integer itemByDay
     Teacher teacher
-    Squad group
+    Squad squad
     Classroom classroom
     Date    dateCreated
-    Date    lastUpdate
+    Date    lastUpdated
     Timestamp version
 
     static constraints = {
@@ -19,7 +19,11 @@ class Lesson {
         day         blank: false, nullable: false
         itemByDay   blank: false, nullable: false
         teacher     blank: false, nullable: false
-        group       blank: false, nullable: false
+        squad       blank: false, nullable: false
         classroom   blank: false, nullable: false
+    }
+    @Override
+    public String toString() {
+        return science + " " + day
     }
 }

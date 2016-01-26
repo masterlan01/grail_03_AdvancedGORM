@@ -6,14 +6,19 @@ class Pupil {
 
     String  firstName
     String  lastName
-    Squad group
+    Squad   squad
     Date    dateCreated
-    Date    lastUpdate
+    Date    lastUpdated
     Timestamp version
 
     static constraints = {
         firstName   blank: false, nullable: false, unique: ['firstName','lastName']
         lastName    blank: false, nullable: false
-        group       blank: false, nullable: false
+        squad       blank: false, nullable: false
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName
     }
 }
